@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    /* height: 50px; */
+    background-color: deepskyblue;
+    /* background: linear-gradient( to right,
+                                #ff89ff , 
+                                #7aa9ff
+                                ); */
+    padding: 10px 5px;
+}
+
+main{
+    width: 100%;
+    /* height: 400px; */
+}
+
+footer{
+    width: 100%;
+    /* height: 50px; */
+    background-color: coral;
+    padding: 1em;
+}
+
+/* 
+    1 nav-bar
+    2 banner
+    3 content-container
+*/
+
+
+
+/*  ==========
+    1 nav-bar
+    ========== */
+
+.main-nav {
+    display: flex;
+    list-style: none;
+    font-size: 1;
+    margin: 0; 
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav{
+        font-size: 0.8em; 
+        padding: 0;
+    }
+}
+
+.main-nav li {
+    padding: 5px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    transition: 150ms ease;
+}
+
+.main-nav a:hover{
+    padding: 5px;
+    color: white;
+    border: 2px solid  white;
+    border-radius: 10px;
+}
+
+.push {
+    margin-left: auto;
+}
+
+.push a:hover {
+    border: 2px solid  white;
+}
+
+
+/*  ========
+    2 banner
+    ======== */
+
+.banner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.banner:hover {
+    cursor: pointer;
+}
+
+    /*  ==================
+        // shadow style //
+        ==================  */
+
+.shadow-style::after, .shadow-style::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+}
+
+.shadow-style::after {
+    border-bottom: 4px solid white;
+    border-top: 4px solid white;
+    transform: scale(0, 1);
+    transition: 250ms ease-out;
+}
+
+.shadow-style::before {
+    border-right: 4px solid white;
+    border-left: 4px solid white;
+    transform: scale(1, 0);
+    transition: 250ms ease-out;
+}
+
+.banner:hover .shadow-style::after {
+    transform: scale(1.05, 1)
+}
+
+.banner:hover .shadow-style::before {
+    transform: scale(1, 1.12)
+}
+
+    /*  =========================
+        // end of shadow style //
+        =========================   */
+
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease 250ms;
+}
+
+.banner:hover img{
+    opacity: 0.4;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    font-size: 2.25em;
+    text-align: center;
+    color: rgba(41, 128, 185,1.0);
+}
+
+
+/*  ===================
+    3 content-container
+    =================== */
+
+.content-container {
+    width: 100%;
+    /* min-height: 32em; */
+    background: rgb(255, 255, 255);
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 20% 1fr 20%;
+    padding: 0.3em;
+} 
+
+.card__img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.card__text{
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+}
+
+/*  ==================
+    =====4 footer=====
+    ================== */
+
+.social__media {
+    list-style: none;
+    width: 50%;
+    
+    display: flex;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.social__media li {
+    padding: .5em;
+    margin: 0 auto;
+}
+
+.social__media a {
+    text-decoration:  none;
+    color: white;
+    border: 0.1em solid white;
+    transition: 250ms ease-out
+}
+
+.fb:hover {
+    color: deepskyblue;
+    border: .1em solid deepskyblue;
+    border-radius: .2em;
+}
+
+.insta:hover {
+    color: rgb(160, 117, 161);
+    border: .1em solid rgb(160, 117, 161);
+    border-radius: .2em;
+}
+
+.link:hover {
+    color: rgb(0, 162, 255);
+    border: .1em solid rgb(0, 162, 255);
+    border-radius: .2em;
+}
